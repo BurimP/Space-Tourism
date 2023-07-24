@@ -123,6 +123,25 @@ select {
   max-width: 80rem;
 }
 
+.grid-container {
+  display: grid;
+  column-gap: var(--container-gap, 2rem);
+  grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0, 40rem)) minmax(
+      2em,
+      1fr
+    );
+}
+
+.grid-container > *:first-child {
+  grid-column: 2;
+  outline: 1px solid red;
+}
+
+.grid-container > *:last-child {
+  grid-column: 3;
+  outline: 1px solid yellow;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -315,30 +334,4 @@ select {
 
 .dot-indicators > [aria-selected="true"] {
   background-color: hsl(var(--clr-white) / 1);
-}
-
-.number-indicators > * {
-  cursor: pointer;
-  border: 1px solid hsl(var(--clr-light) / 0.5);
-  border-radius: 50%;
-  padding: 1em;
-  aspect-ratio: 1;
-  background: var(--clr-dark);
-  transform: scale(0.3);
-  font-size: var(--fs-700);
-}
-
-.number-indicators > [aria-selected="true"] {
-  background-color: hsl(var(--clr-white) / 1);
-}
-
-.number-indicators > *:hover {
-  background-color: hsl(var(--clr-dark));
-  color: white;
-}
-
-.number-indicators > *:focus {
-  background-color: hsl(var(--clr-dark) / 0.5);
-  border-color: hsl(var(--clr-white) / 1);
-  color: white;
 }
