@@ -21,6 +21,8 @@
     <!-- Our custom CSS -->
     <link rel="stylesheet" href="index.css" />
     <title>Frontend Mentor | Space tourism website</title>
+
+    <script src="index.js" defer></script>
   </head>
   <body class="home">
     <header class="primary-header flex">
@@ -35,7 +37,11 @@
         <span class="sr-only" aria-expanded="false"> Menu</span>
       </button>
       <nav>
-        <ul class="primary-navigation underline-indicators flex">
+        <ul
+          id="primary-navigation"
+          data-visible="false"
+          class="primary-navigation underline-indicators flex"
+        >
           <li class="active">
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
@@ -87,6 +93,5 @@
         >
       </div>
     </div>
-    <script src="index.js"></script>
   </body>
 </html>
