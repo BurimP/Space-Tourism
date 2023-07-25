@@ -36,14 +36,10 @@
 @media (min-width: 45em) {
   :root {
     /* font-sizes */
-    --fs-900: 9.375rem;
     --fs-800: 6.25rem;
     --fs-700: 3.5rem;
     --fs-600: 2rem;
-    --fs-500: 1.75rem;
     --fs-400: 1.125rem;
-    --fs-300: 1rem;
-    --fs-200: 0.875rem;
   }
 }
 
@@ -134,6 +130,11 @@ select {
   gap: var(--gap, 1rem);
 }
 
+.flex.even-columns > * {
+  width: 100%;
+  outline: 1px solid limegreen;
+}
+
 .grid {
   display: grid;
   gap: var(--gap, 1rem);
@@ -154,12 +155,20 @@ select {
 }
 
 .grid-container {
+  text-align: center;
   border: 5px solid limegreen;
   display: grid;
+  place-items: center;
+  padding-inline: 1rem;
+}
+
+.grid-container * {
+  max-width: 50ch;
 }
 
 @media (min-width: 45rem) {
   .grid-container {
+    text-align: left;
     column-gap: var(--container-gap, 2rem);
     grid-template-columns: minmax(2em, 1fr) repeat(2, minmax(0, 40rem)) minmax(
         2em,
@@ -175,6 +184,11 @@ select {
   .grid-container > *:last-child {
     grid-column: 3;
     outline: 1px solid yellow;
+  }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 20vh);
+    align-items: end;
   }
 }
 
@@ -288,6 +302,7 @@ select {
 /* ------------------- */
 
 .large-button {
+  font-size: 2rem;
   position: relative;
   z-index: 1;
   display: inline-grid;
