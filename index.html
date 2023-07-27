@@ -21,11 +21,10 @@
     <!-- Our custom CSS -->
     <link rel="stylesheet" href="index.css" />
     <title>Frontend Mentor | Space tourism website</title>
-
-    <script src="index.js" defer></script>
+    <script src="navigation.js" defer></script>
   </head>
   <body class="home">
-    <a class="skip-to-content sr-only href="#main">Skip to content</a>
+    <a class="skip-to-content" href="#main">Skip to content</a>
     <header class="primary-header flex">
       <div>
         <img
@@ -34,8 +33,8 @@
           class="logo"
         />
       </div>
-      <button class="mobile-nav-toggle" aria-controls="primary navigation">
-        <span class="sr-only" aria-expanded="false"> Menu</span>
+      <button class="mobile-nav-toggle" aria-controls="primary-navigation">
+        <span class="sr-only" aria-expanded="false">Menu</span>
       </button>
       <nav>
         <ul
@@ -53,14 +52,14 @@
           <li>
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
-              href="destination-moon.html"
+              href="destination.html"
               ><span aria-hidden="true">01</span>Destination</a
             >
           </li>
           <li>
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
-              href="crew-commander.html"
+              href="crew.html"
               ><span aria-hidden="true">02</span>Crew</a
             >
           </li>
@@ -73,15 +72,15 @@
           </li>
         </ul>
       </nav>
-      <!-- my ::after is here -->
     </header>
 
     <main id="main" class="grid-container grid-container--home">
       <div>
         <h1 class="text-accent fs-500 ff-sans-cond uppercase letter-spacing-1">
           So, you want to travel to
-          <span class="d.block fs-900 ff-serif text-white">Space</span>
+          <span class="d-block fs-900 ff-serif text-white">Space</span>
         </h1>
+
         <p>
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
