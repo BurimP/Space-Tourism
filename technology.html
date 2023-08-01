@@ -92,7 +92,7 @@
           data-image="commander-image"
           tabindex="0"
         >
-          <span class="sr-only">1</span>
+          <span>1</span>
         </button>
         <button
           aria-selected="false"
@@ -101,7 +101,7 @@
           data-image="mission-image"
           tabindex="-1"
         >
-          <span class="sr-only">2</span>
+          <span>2</span>
         </button>
         <button
           aria-selected="false"
@@ -110,17 +110,8 @@
           data-image="pilot-image"
           tabindex="-1"
         >
-          <span class="sr-only">3</span>
+          <span>3</span>
         </button>
-        <!-- <button
-          aria-selected="false"
-          aria-controls="crew-tab"
-          role="tab"
-          data-image="crew-image"
-          tabindex="-1"
-        >
-          <span class="sr-only">The crew engineer</span>
-        </button> -->
       </div>
 
       <!-- commander -->
@@ -152,13 +143,14 @@
         tabindex="0"
       >
         <header class="flow flow--space-small">
-          <h2 class="fs-600 ff-serif uppercase">Mission Specialist</h2>
-          <p class="fs-700 uppercase ff-serif">Mark SHuttleworth</p>
+          <h2 class="fs-600 ff-serif uppercase">The Terminology ...</h2>
+          <p class="fs-700 uppercase ff-serif">Spaceport</p>
         </header>
         <p>
-          Mark Richard Shuttleworth is the founder and CEO of Canonical, the
-          company behind the Linux-based Ubuntu operating system. Shuttleworth
-          became the first South African to travel to space as a space tourist.
+          A spaceport or cosmodrome is a site for launching (or receiving)
+          spacecraft, by analogy to the seaport for ships or airport for
+          aircraft. Based in the famous Cape Canaveral, our spaceport is ideally
+          situated to take advantage of the Earth's rotation for launch.
         </p>
       </article>
 
@@ -171,19 +163,20 @@
         tabindex="0"
       >
         <header class="flow flow--space-small">
-          <h2 class="fs-600 ff-serif uppercase">Pilot</h2>
-          <p class="fs-700 uppercase ff-serif">Victor Glover</p>
+          <h2 class="fs-600 ff-serif uppercase">The Terminology ...</h2>
+          <p class="fs-700 uppercase ff-serif">Space Capsule</p>
         </header>
         <p>
-          Pilot on the first operational flight of the SpaceX Crew Dragon to the
-          International Space Station. Glover is a commander in the U.S. Navy
-          where he pilots an F/A-18.He was a crew member of Expedition 64, and
-          served as a station systems flight engineer.
+          A space capsule is an often-crewed spacecraft that uses a blunt-body
+          reentry capsule to reenter the Earth's atmosphere without wings. Our
+          capsule is where you'll spend your time during the flight. It includes
+          a space gym, cinema, and plenty of other activities to keep you
+          entertained.
         </p>
       </article>
 
       <!-- engineer -->
-      <article
+      <!-- <article
         hidden
         class="crew-details flow"
         id="crew-tab"
@@ -200,39 +193,36 @@
           first self-funded woman to fly to the ISS, and the first Iranian in
           space.
         </p>
-      </article>
+      </article> -->
 
       <picture id="commander-image">
-        <source
-          srcset="assets/crew/image-douglas-hurley.webp"
-          type="image/webp"
+        <source srcset="" type="image/webp" />
+        <img
+          src="/assets/technology/image-launch-vehicle-portrait.jpg"
+          alt="Douglas Hurley"
         />
-        <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley" />
       </picture>
       <picture hidden id="mission-image">
-        <source
-          srcset="assets/crew/image-mark-shuttleworth.webp"
-          type="image/webp"
-        />
+        <source srcset="" type="image/webp" />
         <img
-          src="assets/crew/image-mark-shuttleworth.png"
+          src="assets/technology/image-spaceport-portrait.jpg"
           alt="Douglas Hurley"
         />
       </picture>
       <picture hidden id="pilot-image">
-        <source
-          srcset="assets/crew/image-victor-glover.webp"
-          type="image/webp"
+        <source srcset="" type="image/webp" />
+        <img
+          src="assets/technology/image-space-capsule-portrait.jpg"
+          alt="Douglas Hurley"
         />
-        <img src="assets/crew/image-victor-glover.png" alt="Douglas Hurley" />
       </picture>
-      <picture hidden id="crew-image">
+      <!-- <picture hidden id="crew-image">
         <source
           srcset="assets/crew/image-anousheh-ansari.webp"
           type="image/webp"
         />
         <img src="assets/crew/image-anousheh-ansari.png" alt="Douglas Hurley" />
-      </picture>
+      </picture> -->
     </main>
   </body>
 </html>
