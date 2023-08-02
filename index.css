@@ -705,6 +705,8 @@ body {
 
 .grid-container--technology {
   --flow-space: 2rem;
+  padding-inline: 0;
+  justify-content: center;
   grid-template-areas:
     "title"
     "image"
@@ -712,10 +714,15 @@ body {
     "content";
 }
 
+.grid-container--technology > article {
+  padding-inline: 2rem;
+}
+
 .grid-container--technology > picture {
   grid-area: image;
-  max-width: 60%;
-  /* border-bottom: 1px solid hsl(var(--clr-white) / 0.1); */
+  min-width: 100%;
+  grid-column: span 1;
+  height: 100%;
 }
 
 .grid-container--technology > .dot-indicators {
@@ -726,6 +733,7 @@ body {
   color: black;
   font-size: var(--fs-400);
   font-family: "Courier New", Courier, monospace;
+  height: 2.5rem;
 }
 
 .grid-container--technology > .crew-details {
@@ -746,15 +754,33 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
   }
+}
 
+@media (min-width: 40em) {
   .grid-container--technology {
-    padding-bottom: 0;
-    grid-template-areas:
-      "title"
-      "content"
-      "tabs"
-      "image";
+    grid-template-columns:
+      minmax(1rem, 2rem) minmax(1rem, 5rem) minmax(5rem, 50rem)
+      minmax(1rem, 5rem);
+    justify-items: start;
+    grid-template-areas: ". title title ." ". tabs content image" " . tabs content image";
   }
+
+  .grid-container--technology > picture {
+    grid-column: span 2;
+    align-self: flex-end;
+  }
+
+  /* .grid-container--technology > article h2 {
+    font-size: var(--fs-400);
+  }
+
+  .grid-container--technology > article #first-paragraph {
+    font-size: var(--fs-600);
+  }
+
+  .grid-container--technology > article p {
+    font-size: var(--fs-200);
+  } */
 }
 
 @media (min-width: 45em) {
@@ -790,7 +816,8 @@ body {
   }
 
   .grid-container--destination > picture {
-    max-width: 90%;
+    width: 50%;
+    max-width: 100%;
   }
 
   .destination-meta {
@@ -808,16 +835,32 @@ body {
 
   .grid-container--technology > .dot-indicators > button {
     aspect-ratio: 1;
-    height: 4rem;
+    height: max(2.5rem, 3.5rem);
+  }
+
+  .grid-container--technology > .dot-indicators {
+    flex-direction: column;
   }
 
   .grid-container--technology > picture {
     grid-column: span 3;
-    align-self: start;
+    align-self: flex-end;
     max-width: 90%;
   }
 
   main {
     margin-bottom: 5rem;
+  }
+
+  .grid-container--technology > article h2 {
+    font-size: clamp(var(--fs-400), var(--fs-600), var(--fs-600));
+  }
+
+  .grid-container--technology > article #first-paragraph {
+    font-size: clamp(var(--fs-400), var(--fs-700), var(--fs-700));
+  }
+
+  .grid-container--technology > article p {
+    font-size: var(--fs-200);
   }
 }
