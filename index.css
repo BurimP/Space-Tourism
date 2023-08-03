@@ -864,3 +864,23 @@ body {
     font-size: var(--fs-200);
   }
 }
+
+/* Just for commit, to be deleted */
+
+main {
+  margin-bottom: 5rem;
+}
+
+.grid-container--technology > article h2 {
+  font-size: clamp(var(--fs-400), var(--fs-600), var(--fs-600));
+}
+
+.grid-container--technology > article #first-paragraph {
+  font-size: clamp(var(--fs-400), var(--fs-700), var(--fs-700));
+}
+
+.grid-container--technology > article p {
+  font-size: var(--fs-200);
+}
+
+/* --------------------------------------------- */
